@@ -1,27 +1,23 @@
 package entidad;
 
-import java.text.Format;
-
 public class Paciente {
 
     private int dni;
     private String nombre;
     private int edad;
-    private char sexo;
+    private String sexo;
     private int[] peso;
-    private double estatura;
-    String Mes[] = {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"};
+    public String[] Mes = {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"};
 
-    public Paciente(int dni, String nombre, int edad, char sexo, double estatura) {
+    public Paciente(int dni, String nombre, int edad, String sexo) {
         this.dni = dni;
         this.nombre = nombre;
         this.edad = edad;
         this.sexo = sexo;
         this.peso = new int[12];
-        this.estatura = estatura;
 
         for (int i = 0; i < peso.length; i++) {
-            peso[i] = (int) (Math.random() * (251 - 70));
+            peso[i] = (int) (Math.random() * (251 - 70 +1)+70);
         }
     }
 
@@ -52,11 +48,11 @@ public class Paciente {
         this.edad = edad;
     }
 
-    public char getSexo() {
+    public String getSexo() {
         return sexo;
     }
 
-    public void setSexo(char sexo) {
+    public void setSexo(String sexo) {
         this.sexo = sexo;
     }
 
@@ -66,14 +62,6 @@ public class Paciente {
 
     public void setPeso(int[] peso) {
         this.peso = peso;
-    }
-
-    public double getEstatura() {
-        return estatura;
-    }
-
-    public void setEstatura(double estatura) {
-        this.estatura = estatura;
     }
 
     public String menorPesoMensual() {
@@ -86,13 +74,13 @@ public class Paciente {
                 minMes = Mes[i];
             }
         }
-        return "El mes con menor peso es: " + minMes;
+        return minMes;
     }
 
-    public double indiceMasaCorporal(int mesX) {
-        int pesoMesX = peso[mesX - 1];
+    int i = 0;
+    public double indiceMasaCorporal(double estatura,int mesX) {
         double IMC = 0;
-        IMC = pesoMesX / Math.pow(getEstatura(), 2);
+        IMC = this.peso[mesX -1] / Math.pow(estatura, 2);
         return IMC;
     }
 
@@ -107,20 +95,19 @@ public class Paciente {
         return mesesMenorXKilos;
     }
 
-    public String pesoMesX() {
+    public String pesoMesX(double IMC) {
         String condición = null;
-        indiceMasaCorporal(6);
 
-        if (indiceMasaCorporal(6) > 15 && indiceMasaCorporal(6) < 20){
+        if (IMC >= 15 && IMC < 20){
             condición = "Normal";
-        } else if (indiceMasaCorporal(6) >= 20 && indiceMasaCorporal(6) < 28) {
+        } else if (IMC >= 20 && IMC < 28) {
             condición = "Sobrepeso";
-        } else if (indiceMasaCorporal(6) >= 28) {
+        } else if (IMC >= 28) {
             condición = "Obeso";
         } else {
             condición = "Valor por debajo de 15";
         }
         return condición;
 
-        }
+    }
 }

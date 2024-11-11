@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="36e49d80-7273-442e-bcc1-bdc9b116727b" name="Changes" comment="Primera parte">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/evaluacion1CursoJava.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entidad/Paciente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaz/Leer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaz/appContigoAprendo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entidad/Paciente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entidad/Paciente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interfaz/appContigoAprendo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaz/appContigoAprendo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +73,14 @@
       <option name="presentableId" value="Default" />
       <updated>1730251958696</updated>
     </task>
+    <task id="LOCAL-00001" summary="Primera parte">
+      <created>1730975756828</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1730975756828</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
